@@ -1,17 +1,19 @@
+import { Skeleton } from '@chakra-ui/react'
 import { ChartLegendOptions, ChartOptions } from 'chart.js'
 import React from 'react'
 import { Line } from 'react-chartjs-2'
-import theme from '../theme'
+import { theme } from '../theme'
 
 type Props = {
     xAxisData: number[] | string[]
     yAxisData: number[]
+    isLoaded: boolean
     title?: string
     xLabel?: string
     yLabel?: string
 }
 
-const LineChart = ({ xAxisData, yAxisData, title, xLabel, yLabel }: Props) => {
+const LineChart = ({ xAxisData, yAxisData, isLoaded, title, xLabel, yLabel }: Props) => {
     const legendOptions: ChartLegendOptions = {
         display: false,
     }
@@ -40,20 +42,22 @@ const LineChart = ({ xAxisData, yAxisData, title, xLabel, yLabel }: Props) => {
     }
 
     return (
-        <Line
-            data={{
-                labels: xAxisData,
-                datasets: [
-                    {
-                        backgroundColor: theme.colors.blue100,
-                        borderColor: theme.colors.primary,
-                        data: yAxisData,
-                    },
-                ],
-            }}
-            options={options}
-            legend={legendOptions}
-        />
+        <Skeleton isLoaded={isLoaded}>
+            <Line
+                data={{
+                    labels: xAxisData,
+                    datasets: [
+                        {
+                            backgroundColor: theme.colors.blue100,
+                            borderColor: theme.colors.primary,
+                            data: yAxisData,
+                        },
+                    ],
+                }}
+                options={options}
+                legend={legendOptions}
+            />
+        </Skeleton>
     )
 }
 
