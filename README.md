@@ -1,17 +1,15 @@
 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/76220810/122697118-908d9280-d23c-11eb-9287-afb483c91f2d.gif">
+   <img src="https://user-images.githubusercontent.com/76220810/122701221-a7d07e00-d244-11eb-9c4e-cc63fc85a992.gif">
 </p>
-
-
-
-
 
 
 <p align="center">
-    <img height="480px" src="https://user-images.githubusercontent.com/76220810/122697378-1e697d80-d23d-11eb-8cba-f666bc3788aa.png">
-    <img height="480px" src="https://user-images.githubusercontent.com/76220810/122697383-20cbd780-d23d-11eb-8be0-04e0237bc2a3.png">
+    <img height="400px" src="https://user-images.githubusercontent.com/76220810/122697378-1e697d80-d23d-11eb-8cba-f666bc3788aa.png">
+    <img height="400px" src="https://user-images.githubusercontent.com/76220810/122697383-20cbd780-d23d-11eb-8be0-04e0237bc2a3.png">
 </p>
+
+<br/>
 
 
 # Finimize Full-Stack Development Challenge
@@ -77,8 +75,7 @@ I think that the testing, especially on the frontend, could be improved. Current
 
 I also think that we should add another very useful feature: selecting the investment period. We could do this by adding another number input that allows the user to enter the time period in years and then get the calculated compound interest for the period and render it. On the server-side, I’ve already exposed the ‘time’ parameter (see CompoundInterestRequest.ts) so we just need to send the time period input value along with the other params to get the result :)
 
-I’ve also added some `TODO`![web](https://user-images.githubusercontent.com/76220810/122697365-1a3d6000-d23d-11eb-85a0-d15d46691b72.png)
- comments for future improvements that I’d make :)
+I’ve also added some `TODO` comments for future improvements that I’d make :)
 
 ## Run Instructions
 
